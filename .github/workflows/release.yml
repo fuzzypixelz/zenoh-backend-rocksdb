@@ -56,7 +56,7 @@ jobs:
   build-standalone:
     name: Build executables and libraries
     needs: tag
-    uses: eclipse-zenoh/ci/.github/workflows/build-crates-standalone.yml@main
+    uses: eclipse-zenoh/ci/.github/workflows/build-crates-standalone.yml@staging
     with:
       repo: ${{ github.repository }}
       version: ${{ needs.tag.outputs.version }}
