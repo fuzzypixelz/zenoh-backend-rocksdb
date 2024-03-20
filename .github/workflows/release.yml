@@ -35,6 +35,17 @@ jobs:
       - if: ${{ inputs.install-llvm-vcpkg }}
         run: vcpkg install llvm
 
-      - run: rustup target add x86_64-pc-windows-msvc
+      # - run: rustup target add x86_64-pc-windows-msvc
 
-      - run: cargo build --release --lib --bins --target x86_64-pc-windows-msvc
+      # - run: cargo build --release --lib --bins --target x86_64-pc-windows-msvc
+
+      - run: echo $SHELL $COMSPEC
+
+      - run: where cl.exe
+        shell: cmd
+
+      - run: where.exe cl.exe
+        shell: pwsh
+
+      - run: which cl
+        shell: bash
